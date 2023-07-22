@@ -8,13 +8,13 @@ const app = express();
 app.use(express.json());
 app.use(cors(
   {
-    origin: ["https://deploy-project-frontend.vercel.app/"],
+    origin: [""],
     methods: ["POST", "GET"],
     credentials: true
   }
 ));
 
-mongoose.connect("mongodb+srv://nadeeaulia:palemb2703@cluster0.pga6q2i.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://nadeeaulia:palemb2703@cluster0.pga6q2i.mongodb.net/employee?retryWrites=true&w=majority");
 
 app.get('/users', (req, res) => {
   UserModel.find({})
