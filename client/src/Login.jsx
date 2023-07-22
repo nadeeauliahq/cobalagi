@@ -18,7 +18,7 @@ function Login() {
         }
 
         axios
-            .post("https://deploy-project-new.vercel.app/login", { email, password })
+            .post("https://cobalagi-api.vercel.app/login", { email, password })
             .then((result) => {
                 console.log(result);
                 if (result.data === "Success") {
