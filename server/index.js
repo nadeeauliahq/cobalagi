@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
   {
-    origin: ["*"],
+    origin: ["https://cobalagi-fe.vercel.app"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
   }
