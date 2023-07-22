@@ -15,7 +15,10 @@ app.use(cors(
 ));
 
 mongoose.connect("mongodb+srv://nadeeaulia:palemb2703@cluster0.pga6q2i.mongodb.net/employee?retryWrites=true&w=majority");
-
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://cobalagi-fe.vercel.app');
+  next();
+});
 app.get('/users', (req, res) => {
   UserModel.find({})
     .then(users => res.json(users))
